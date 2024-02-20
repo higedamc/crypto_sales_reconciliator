@@ -28,7 +28,7 @@ def process_data(file_path, start_date):
     return final_output
 
 # ここでファイルパスと開始日を指定
-file_path = '2024-01-20_2.csv'
+file_path = 'censored.csv'
 start_date = '2023-12-29T06:19:12.021Z'
 
 # 処理の実行と結果の出力
