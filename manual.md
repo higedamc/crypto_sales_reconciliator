@@ -7,4 +7,5 @@
 5. Execute cal.py to generate sales_report.md
 6. Edit each JPY column
 7. Execute recal.py to sum JPY on sales_report.md
-8. Execute `pandoc -f markdown -t pdf -o 20xx-x-x-sales-report.pdf sales_report.md`
+8. Execute updateusdt.py to add USDT column on sales_repodt.md
+9. Execute `pandoc sales_report.md -o 20xx-x-x-sales-report.pdf -t latex --pdf-engine=/Library/TeX/texbin/pdflatex`
