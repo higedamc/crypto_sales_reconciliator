@@ -10,8 +10,9 @@ def process_data(file_path, start_date):
 
     # データのフィルタリング
     filtered_df = df[(df['utcDate'] >= start_date) & (df['type'] != 'DEBIT')]
-    filtered_df['formatted_date'] = pd.to_datetime(filtered_df['utcDate'])
+    filtered_df.loc[:, 'formatted_date'] = pd.to_datetime(filtered_df['utcDate'])
     filtered_df = filtered_df.sort_values(by='formatted_date', ascending=True)
+    
 
     # 合計額とfiatTotalの計算
     total_amount = filtered_df['amount'].sum()
@@ -39,7 +40,7 @@ def process_data(file_path, start_date):
 
 # ここでファイルパスと開始日を指定
 file_path = 'censored.csv'
-start_date = '2024-04-25T13:23:16.599Z'
+start_date = '2024-05-24T14:08:56.176Z'
 
 # 処理の実行と結果の出力
 result = process_data(file_path, start_date)
